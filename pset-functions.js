@@ -162,12 +162,12 @@ console.log('Problem 3:')
   // Add your code below this line
   //create a function called isPalindrome w/ a parameter called words
 
-  function isPalindrome(word){
-    return word === word.split('').reverse().join('')
-  }
+  // function isPalindrome(word){
+  //   return word === word.split('').reverse().join('')
+  // }
 
   //refactored using arrow function
-  // const isPalindrome = (word) => word === word.split('').reverse().join('')
+  const isPalindrome = (word) => word === word.split('').reverse().join('')
 
   console.log(isPalindrome('noon'))
   console.log(isPalindrome('racecar'))
@@ -206,9 +206,26 @@ console.log('Problem 4:')
 
 // Add your code below this line
 //create a function called doubleLetters with word parameter
-function doubleLetters(word){
+// function doubleLetters(word){
+//   //loop through the word
+//   for(i = 0; i <= word.length; i++) {
+//     //loop through the word again (behind it)
+//         for(var j = i+1; j <= word.length; j++) {
+//           //compare results, if results match, it has double letters
+//             if(word[j] == word[i]) {
+//                 return true;
+//             }
+//         }
+//     }
+//     return false;
+// }
+
+//refactored using arrow function
+const doubleLetters = (word) => {
   for(i = 0; i <= word.length; i++) {
+    //loop through the word again (behind it)
         for(var j = i+1; j <= word.length; j++) {
+          //compare results, if results match, it has double letters
             if(word[j] == word[i]) {
                 return true;
             }
@@ -216,6 +233,8 @@ function doubleLetters(word){
     }
     return false;
 }
+
+
 console.log(doubleLetters("loop"))
 console.log(doubleLetters("rune"))
 console.log(doubleLetters("apple"))
